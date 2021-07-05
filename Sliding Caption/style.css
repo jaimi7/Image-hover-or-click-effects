@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box{
+  margin: 50px auto;
+  width: 300px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.box .content{
+  padding: 20px;
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.box:hover .content{
+  left: 0;
+}

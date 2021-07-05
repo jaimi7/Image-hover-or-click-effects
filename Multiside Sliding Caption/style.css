@@ -1,0 +1,83 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width: 500px;
+  margin: 30px auto;
+  border: 2px solid #ccc;
+  padding: 2px;
+  overflow: hidden;
+}
+.box a{
+  display: block;
+  position: relative;
+}
+.box a img{
+  width: 100%;
+  height: auto;
+}
+.box a .point{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.box a:before,
+.box a:after,
+.box a .point:after,
+.box a .point:before{
+  content:"";
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	background:	rgba(120,0,12,0.3);
+	transition: all 0.7s;
+}
+.box a:before{
+  left: -100%;
+	top: 0;
+}
+.box a:after{
+  right: 0%;
+	top: -100%;
+	background:	rgba(255,255,255,0.7);
+}
+.box a .point:after{
+  right: -100%;
+  bottom: 0;
+}
+.box a .point:before{
+  left: 0;
+	bottom: -100%;
+	background:	rgba(255,255,255,0.7);
+}
+.box:hover a:before{
+  left: 0%;
+	top: 0;
+}
+.box:hover a:after{
+  right: 0%;
+	top: 0;
+}
+.box:hover a .point:after{
+  right: 0;
+}
+.box:hover a .point:before{
+  bottom: 0;
+}
+.box a .point b{
+  position: relative;
+	top: 45%;
+	font-weight: bold;
+	font-size: 50px;
+	color: #000;
+	opacity: 0;
+	transition: all 0.5s 0.1s;
+}
+.box:hover a .point b{
+  opacity: 1;
+}

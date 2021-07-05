@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.box{
+  margin: 50px auto;
+  width: 300px;
+  border: 1px solid #ccc;
+  position: relative;
+  perspective:900px;
+}
+img{
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+  transform:rotateY();
+}
+.box .content{
+  padding: 20px;
+  transition: all 0.5s;
+  color:white;
+  background-color:#546e7a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  transform:rotateY(90deg);
+}
+.box:hover img{
+  transform:rotateY(-90deg);
+}
+.box:hover .content{
+  transform:rotateY(0);
+}

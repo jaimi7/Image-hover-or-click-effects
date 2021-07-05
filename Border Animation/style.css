@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box{
+  margin: 50px auto;
+  width: 450px;
+  box-shadow: 0 0 8px gray;
+  overflow: hidden;
+  position: relative;;
+}
+.box:before,
+.box:after{
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.box:before{
+  bottom: 5%;
+  left: 5%;
+  border-bottom: 5px solid #000;
+  border-left: 5px solid #000;
+}
+.box:after{
+  top: 3%;
+  right: 3%;
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+.box:hover:before,
+.box:hover:after{
+  opacity: 1;
+  width: 90%;
+  height: 90%;
+}
+.box img{
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  display: block;
+  transition: all 0.5s;
+}
+.box:hover img{
+  transform: scale(1.05);
+}
+.box .content{
+  width: 100%;
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  color: #fff;
+}
+.content .name,
+.content .post{
+  display: block;
+  font-size: 20px;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.box .content .name{
+  opacity: 1;
+}
+.box .content .post{
+  opacity: 0;
+}
+.box:hover .content .name{
+  opacity: 0;
+}
+.box:hover .content .post{
+  opacity: 1;
+}
