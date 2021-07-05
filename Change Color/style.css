@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 30%;
+    box-shadow: 1px 1px 15px 1px #6b6b6b;
+    margin: 50px auto;
+    position: relative;
+}
+.box img{
+    width: 100%;
+}
+.box .nocolor{
+    filter: grayscale(100%);
+}
+.color{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-bottom: 3px solid #cccccc;
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+.box:hover .color{
+    max-height: 500px;
+}

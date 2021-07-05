@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 30%;
+    margin: 50px auto;
+    box-shadow: 1px 1px 25px 1px #6b6b6b;
+    position: relative;
+}
+.container img{
+    width: 100%;
+}
+.img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-bottom: 3px solid #cccccc;
+    max-height: 0;
+    transition: max-height 1s;
+    overflow: hidden;
+}
+.container:hover .img{
+    max-height: 500px;
+}
